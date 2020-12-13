@@ -2,12 +2,16 @@ package com.example.fragmentinteraction;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.databinding.BindingAdapter;
 import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProviders;
 
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.fragmentinteraction.databinding.ActivityMainBinding;
 import com.example.fragmentinteraction.databinding.FragmentABinding;
@@ -59,6 +63,5 @@ public class MainActivity extends AppCompatActivity {
                     .commit();
         }
     }
-
 
 }

@@ -2,9 +2,17 @@
 
 <layout xmlns:android="http://schemas.android.com/apk/res/android">
 
+    <data>
+
+        <variable
+            name="fragmentt"
+            type="com.example.fragmentinteraction.FragmentA" />
+
+    </data>
+
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="301dp"
         android:gravity="center_horizontal"
         android:orientation="vertical"
         android:padding="16dp">
@@ -19,6 +27,33 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Ok" />
+
+        <EditText
+            android:id="@+id/editEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@={fragmentt.emailLive}"
+            android:ems="10"
+            android:hint="email"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/editPass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="@={fragmentt.passLive}"
+            android:ems="10"
+            android:hint="password"
+            android:inputType="textPersonName" />
+
+        <Button
+            android:id="@+id/buttonSave"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Save" />
 
     </LinearLayout>
 
