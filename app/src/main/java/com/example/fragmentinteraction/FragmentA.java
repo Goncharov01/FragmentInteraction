@@ -1,19 +1,13 @@
 package com.example.fragmentinteraction;
 
-
 import android.os.Bundle;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.databinding.BindingAdapter;
 import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.MutableLiveData;
@@ -26,9 +20,6 @@ public class FragmentA extends Fragment {
 
     private SharedViewModel viewModel;
     FragmentABinding binding;
-
-    public MutableLiveData<String> password = new MutableLiveData<>();
-    public MutableLiveData<String> email = new MutableLiveData<>();
 
     public MutableLiveData<String> passLive = new MutableLiveData<>();
     public MutableLiveData<String> emailLive = new MutableLiveData<>();
@@ -50,12 +41,10 @@ public class FragmentA extends Fragment {
             @Override
             public void onClick(View view) {
 
-                password.setValue(passLive.getValue());
-                email.setValue(emailLive.getValue());
+                String email = String.valueOf(binding.editEmail.getText());
+                String pass = String.valueOf(binding.editPass.getText());
 
-                System.out.println("!!!!!!!!!!!" + password + "  " + email);
-
-                Toast.makeText(view.getContext(), password.toString() + " and " + email.toString(), Toast.LENGTH_LONG).show();
+                Toast.makeText(view.getContext(), email + " " + pass, Toast.LENGTH_LONG).show();
 
             }
         });
@@ -76,10 +65,5 @@ public class FragmentA extends Fragment {
             }
         });
     }
-
-    //    @BindingAdapter("android:text")
-//    public static void setText(TextView view, int value) {
-//        view.setText(Integer.toString(value));
-//    }
 
 }
