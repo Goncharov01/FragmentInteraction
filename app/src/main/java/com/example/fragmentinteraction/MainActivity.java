@@ -33,6 +33,11 @@ public class MainActivity extends AppCompatActivity {
                     fragment = new FragmentB();
                     loadFragment(fragment);
                     return true;
+
+                case R.id.navigation_recycler:
+                    fragment = new FragmentRecycler();
+                    loadFragment(fragment);
+                    return true;
             }
             return false;
         }

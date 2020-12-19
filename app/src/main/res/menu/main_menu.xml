@@ -11,4 +11,9 @@
         android:title="dashboard"
         android:icon="@android:drawable/btn_dialog"/>
 
+    <item
+        android:id="@+id/navigation_recycler"
+        android:title="recycler"
+        android:icon="@android:drawable/ic_menu_mapmode"/>
+
 </menu>
